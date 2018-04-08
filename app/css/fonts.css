@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Sailec;
+    src: url("../fonts/Sailec.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Sailec;
+    font-weight: 500;
+    src: url("../fonts/Sailec-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Sailec;
+    font-weight: bold;
+    src: url("../fonts/Sailec-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Sailec;
+    font-weight: lighter;
+    src: url("../fonts/Sailec-Light.otf") format("opentype");
+}
