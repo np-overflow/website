@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Initialized app');
 
   var options = {
-    strings: ["Welcome to NP's Hack Club", "Welcome to Overflow"],
+    strings: ["Welcome to NP's Hack Club", "Welcome to Uniql", "Welcome to Overflow"],
     startDelay: 1000,
     showCursor: true,
     cursorChar: '_',

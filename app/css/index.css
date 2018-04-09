@@ -2,8 +2,6 @@ body {
     user-select: none;
     background-color: whitesmoke; 
     font-family: Sailec !important;
-    animation-name: fadeIn;
-    animation-duration: 0.6s;
 }
 
 img {
