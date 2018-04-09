@@ -17,7 +17,6 @@
 	<script src="js/vendor.js"></script>
 	<script>require('initialize')</script>
 	<link rel="stylesheet" href="css/app.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500" rel="stylesheet">
 
 </head>
 
@@ -46,7 +45,7 @@
 			</a>
 		</section>
 	</header>
-	<div class="container landing">
+	<div class="container landing centered">
 		<h1>
 			<span class="element"></span>
 		</h1>
@@ -55,17 +54,19 @@
 
 	<div class="container section padded">
 		<div class="columns">
-			<div class="container col-4 col-xs-10">
+			<div class="container col-4 col-xs-10 col-ml-auto text-break">
 				<h3>About Us</h3>
 				Hi! We are Overflow, a collective of like-minded individuals passionate in coding, software development, and technology.
-				<br> <br>
-				Overflow aims to become the breeding ground for the creators of the next generation; by providing opportunities to pick up extracurricular skills & outlets to exhibit our very own creations. 
-				<br> <br>
-				We spend our time taking part in competitions, holding workshops, learning, and building fun side projects.
-				<span class="show-xs"><br> <br></span>
+				<br>
+				<br> Overflow aims to become the breeding ground for the creators of the next generation; by providing opportunities to pick
+				up extracurricular skills & outlets to exhibit our very own creations.
+				<span class="show-xs">
+					<br>
+					<br>
+				</span>
 			</div>
-			<div class="divider-vert col-1 hide-xs"></div>
-			<div class="container col-3 col-xs-10">
+			<div class="divider-vert col-1 hide-xs col-mx-auto"></div>
+			<div class="container col-4 col-xs-10 col-mr-auto">
 				<h3>Whats going on?</h3>
 				<div class="timeline">
 					<div class="timeline-item" id="timeline-example-1">
@@ -74,8 +75,8 @@
 						</div>
 						<div class="timeline-content">
 							<!-- tiles structure -->
-								<p class="tile-subtitle h6">April 2018</p>
-								<p class="tile-title text-primary">CCA Fiesta Display</p>
+							<p class="tile-subtitle h6">April 2018</p>
+							<p class="tile-title text-primary">CCA Fiesta Display</p>
 						</div>
 					</div>
 					<div class="timeline-item" id="timeline-example-1">
@@ -92,72 +93,126 @@
 		</div>
 	</div>
 
-		<div class="columns">
-			<div class="parallax col-xl-6 col-3 col-xs-12">
-				<div class="parallax-top-left" tabindex="1"></div>
-				<div class="parallax-top-right" tabindex="2"></div>
-				<div class="parallax-bottom-left" tabindex="3"></div>
-				<div class="parallax-bottom-right" tabindex="4"></div>
-				<div class="parallax-content red-red">
-					<div class="parallax-front">
-						<h2>iOS & Android Development</h2>
-					</div>
-					<div class="parallax-back">
-						<img src="images/iphone.png" class="img-responsive rounded" ...>
-					</div>
+	<div class="columns padded">
+		<h1 class="centered padded col-6">Workshops, Events, and Hackathons.</h1>
+		<div class="parallax col-xl-6 col-3 col-xs-12 col-mr-auto">
+			<div class="parallax-top-left" tabindex="1"></div>
+			<div class="parallax-top-right" tabindex="2"></div>
+			<div class="parallax-bottom-left" tabindex="3"></div>
+			<div class="parallax-bottom-right" tabindex="4"></div>
+			<div class="parallax-content red-red">
+				<div class="parallax-front">
+					<h2>iOS & Android Development</h2>
+				</div>
+				<div class="parallax-back">
+					<img src="images/iphone.png" class="img-responsive rounded" ...>
 				</div>
 			</div>
-			<div class="parallax col-xl-6 col-3 col-xs-12">
-				<div class="parallax-top-left" tabindex="1"></div>
-				<div class="parallax-top-right" tabindex="2"></div>
-				<div class="parallax-bottom-left" tabindex="3"></div>
-				<div class="parallax-bottom-right" tabindex="4"></div>
-				<div class="parallax-content green-af">
-					<div class="parallax-front">
-						<h2>Web Development</h2>
-					</div>
-					<div class="parallax-back">
-						<img src="/images/web.png" class="img-responsive rounded" ...>
-					</div>
+		</div>
+		<div class="parallax col-xl-4 col-md-6 col-3 col-xs-12 col-mr-auto">
+			<div class="parallax-top-left" tabindex="1"></div>
+			<div class="parallax-top-right" tabindex="2"></div>
+			<div class="parallax-bottom-left" tabindex="3"></div>
+			<div class="parallax-bottom-right" tabindex="4"></div>
+			<div class="parallax-content green-af">
+				<div class="parallax-front">
+					<h2>Web Development</h2>
+				</div>
+				<div class="parallax-back">
+					<img src="/images/web.png" class="img-responsive rounded" ...>
 				</div>
 			</div>
-			<div class="parallax col-xl-6 col-3 col-xs-12">
-				<div class="parallax-top-left" tabindex="1"></div>
-				<div class="parallax-top-right" tabindex="2"></div>
-				<div class="parallax-bottom-left" tabindex="3"></div>
-				<div class="parallax-bottom-right" tabindex="4"></div>
-				<div class="parallax-content stupid-blue">
-					<div class="parallax-front">
-						<h2>Version Control</h2>
-					</div>
-					<div class="parallax-back">
-						<img src="/images/vcs.png" class="img-responsive rounded" ...>
-					</div>
+		</div>
+		<div class="parallax col-xl-4 col-md-6 col-6 col-xs-12 col-mr-auto">
+			<div class="parallax-top-left" tabindex="1"></div>
+			<div class="parallax-top-right" tabindex="2"></div>
+			<div class="parallax-bottom-left" tabindex="3"></div>
+			<div class="parallax-bottom-right" tabindex="4"></div>
+			<div class="parallax-content stupid-blue">
+				<div class="parallax-front">
+					<h2>Version Control</h2>
+				</div>
+				<div class="parallax-back">
+					<img src="/images/vcs.png" class="img-responsive rounded" ...>
 				</div>
 			</div>
-			<div class="parallax col-xl-6 col-3 col-xs-12">
-				<div class="parallax-top-left" tabindex="1"></div>
-				<div class="parallax-top-right" tabindex="2"></div>
-				<div class="parallax-bottom-left" tabindex="3"></div>
-				<div class="parallax-bottom-right" tabindex="4"></div>
-				<div class="parallax-content banana-yellow">
-					<div class="parallax-front">
-						<h2>General Software Development</h2>
-					</div>
-					<div class="parallax-back">
-						<img src="/images/development.png" class="img-responsive rounded" ...>
-					</div>
+		</div>
+		<div class="parallax col-xl-4 col-md-6 col-6 col-xs-12 col-mr-auto">
+			<div class="parallax-top-left" tabindex="1"></div>
+			<div class="parallax-top-right" tabindex="2"></div>
+			<div class="parallax-bottom-left" tabindex="3"></div>
+			<div class="parallax-bottom-right" tabindex="4"></div>
+			<div class="parallax-content banana-yellow">
+				<div class="parallax-front">
+					<h2>General Software Development</h2>
+				</div>
+				<div class="parallax-back">
+					<img src="/images/development.png" class="img-responsive rounded" ...>
 				</div>
 			</div>
 		</div>
 	</div>
+	</div>
 
 	<div class="container section padded">
-		I have a depression
+		<h2 class="centered">Overflow 2018 Members</h2>
+		<br>
+		<div class="columns">
+			<div class="container col-5 col-lg-8 col-md-9 col-sm-11 col-mx-auto centered">
+				<a href="http://www.ravernkoh.me/">
+					<figure class="avatar avatar-xl tooltip tooltip-bottom" data-tooltip="Ravern">
+						<img src="images/Avatars/ravern.png" alt="icon">
+					</figure>
+				</a>
+				<a href="http://leafybeef.com">
+					<figure class="avatar avatar-xl tooltip tooltip-bottom" data-tooltip="Sheline">
+						<img src="images/Avatars/sheline.png" alt="icon">
+					</figure>
+				</a>
+				<a href="https://sean1188.github.io">
+					<figure class="avatar avatar-xl tooltip tooltip-bottom" data-tooltip="Sean">
+						<img src="images/Avatars/sean.png" alt="icon">
+					</figure>
+				</a>
+				<a href="https://github.com/Kaioru">
+					<figure class="avatar avatar-xl tooltip tooltip-bottom" data-tooltip="Keith">
+						<img src="images/Avatars/keith.png" alt="icon">
+					</figure>
+				</a>
+				<a href="">
+					<figure class="avatar avatar-xl tooltip tooltip-bottom" data-tooltip="Wan Ning">
+						<img src="images/Avatars/ravern.png" alt="icon">
+					</figure>
+				</a>
+			</div>
+		</div>
+		<div class="padded container col-5 col-lg-8 col-md-9 col-sm-11 col-mx-auto centered">
+			<a href="http://www.ravernkoh.me/">
+				<figure class="avatar avatar-lg tooltip tooltip-bottom" data-tooltip="Ravern">
+					<img src="images/Avatars/ravern.png" alt="icon">
+				</figure>
+			</a>
+			<a href="http://www.ravernkoh.me/">
+				<figure class="avatar avatar-lg tooltip tooltip-bottom" data-tooltip="Ravern">
+					<img src="images/Avatars/ravern.png" alt="icon">
+				</figure>
+			</a>
+			<a href="http://www.ravernkoh.me/">
+				<figure class="avatar avatar-lg tooltip tooltip-bottom" data-tooltip="Ravern">
+					<img src="images/Avatars/ravern.png" alt="icon">
+				</figure>
+			</a>
+		</div>
+	</div>
+
+	<div class="container section padded">
+		<h2 class="centered">Join us</h2>
+		<p class="centered">The more the merrier</p>
 	</div>
 
 
-	<footer> Created by <a href="https://sean1188.github.io">Sean Lim</a> 2018</footer>
+	<footer class=""> Created by
+		<a href="https://sean1188.github.io">a nerd</a> 2018</footer>
 </body>
 
 </html>

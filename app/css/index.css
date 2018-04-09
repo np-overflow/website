@@ -22,7 +22,6 @@ img {
 .landing {
     object-fit: contain;
     padding: 17vh 50px;
-    text-align: center;
     background: linear-gradient(#FF8E2C, #FF5A81);
     color: white
 }
@@ -41,14 +40,14 @@ img {
     font-size: 19px;
 }
 
+.container > a {
+    text-decoration: none !important;
+}
+
 .section {
     padding: none;
     margin: none;
     object-fit: contain;
-}
-
-.padded {
-    padding: 60px 0px;
 }
 
 .parallax-content {
@@ -70,6 +69,11 @@ img {
     padding: 50px;
 }
 
+.avatar > img {
+    object-fit: contain;  
+}
+
 footer {
     padding: 20px 7vw;
+    background-color: whitesmoke;
 }
