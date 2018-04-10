@@ -10,6 +10,8 @@
     "build": "brunch build --production"
   },
   "dependencies": {
+    "handlebars": "^4.0.11",
+    "papaparse": "^4.3.7",
     "typed.js": "^2.0.6"
   },
   "devDependencies": {

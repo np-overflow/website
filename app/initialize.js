@@ -1,4 +1,9 @@
 import Typed from 'typed.js';
+import Papa from 'papaparse';
+import Handlebars from 'handlebars';
+
+require('handlebars');
+require('handlebars/runtime');
 
 document.addEventListener('DOMContentLoaded', () => {
   // do your setup here
@@ -17,4 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }  
 
   var typed = new Typed(".element", options);
+
+  var template = Handlebars.compile(document.getElementById('avatar-template').innerHTML);
+
+  Papa.parse("/members.csv", {
+    download: true,
+    complete: (res) => {
+      console.log(res);
+      let foo = res.data.map((data) => {
+        return template({
+          name: data[0],
+          initial: data[0].split(" ").length > 1 ? data[0].split(" ")[0][0].toUpperCase() + data[0].split(" ")[1][0].toUpperCase() : data[0][0].toUpperCase()
+        });
+      }).join('');
+      document.getElementById('members').innerHTML = foo;
+    }
+  }); 
+
 });

@@ -35,7 +35,7 @@
 		</section>
 		<section class="navbar-section show-xs"></section>
 		<section class="navbar-section hide-xs">
-			<button class="btn btn-link">Join Us</button>
+			<a href="https://tinyurl.com/ICTCCAFiesta-2018" class="btn btn-link">Join Us</a>
 			<div class="divider-vert"></div>
 			<a href="https://github.com/np-overflow" class="btn btn-link tooltip  tooltip-bottom" data-tooltip="GitHub">
 				<img src="/images/github.svg" alt="Github">
@@ -55,12 +55,12 @@
 	<div class="container section padded">
 		<div class="columns">
 			<div class="container col-12 text-break columns">
-				<div class="col-4 col-xl-5 col-md-7 col-xs-9 col-mx-auto">
+				<div class="col-4 col-xl-6 col-md-7 col-xs-9 col-mx-auto">
 					<h3>About Us</h3>
 					Hi! We are NP's Overflow SIG, a collective of like-minded individuals passionate in coding, software development, and technology.
 					<br>
-					<br> Overflow aims to become the breeding ground for the creators of the next generation; by providing opportunities to pick
-					up extracurricular skills & outlets to exhibit our very own creations.
+					<br> Overflow aims to become the breeding ground for the creators of the next generation; by providing opportunities to
+					pick up extracurricular skills & outlets to exhibit our very own creations.
 					<span class="show-xs">
 				</div>
 			</div>
@@ -68,7 +68,7 @@
 				<div class="divider"></div>
 			</div>
 			<div class="container columns col-12">
-				<div class="container col-4 col-xl-5 col-md-7 col-xs-9 col-mx-auto">
+				<div class="container col-4 col-xl-6 col-md-7 col-xs-9 col-mx-auto">
 					<h3>Whats going on?</h3>
 					<div class="timeline">
 						<div class="timeline-item" id="timeline-example-1">
@@ -85,20 +85,22 @@
 								<a class="timeline-icon" href=""></a>
 							</div>
 							<div class="timeline-content">
-								<p class="tile-subtitle h6">To be updated...</p>
+								<p class="tile-subtitle h6">GopherCon SG, Pycon SG... (TBC)</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			</div>
+		</div>
 	</div>
 
 	<div class="columns padded">
 		<div class="columns padded col-6 col-xs-12 col-mx-auto">
 			<div class="col-8 col-mx-auto">
 				<h1>What we do.</h1>
-				Nerd stuff, coding workshops, any fun/silly/innovative projects, outings to developer events, <i>hackathons??</i>, <i>anything as long as it's related to tech tbh</i>, and much more...
+				Nerd stuff, coding workshops, any fun/silly/innovative projects, outings to developer events,
+				<i>hackathons??</i>,
+				<i>anything as long as it's related to tech tbh</i>, and much more...
 			</div>
 		</div>
 		<div class="parallax col-xl-6 col-3 col-xs-12 col-mr-auto">
@@ -161,71 +163,60 @@
 	</div>
 
 	<div class="container section padded">
-		<h2 class="centered">Overflow 2018 Members</h2>
+		<h2 class="centered">Members</h2>
 		<br>
 		<div class="columns">
-			<div class="container col-5 col-lg-8 col-md-9 col-sm-11 col-mx-auto centered">
+			<div class="container col-5 col-xl-6 col-md-9 col-sm-11 col-mx-auto centered">
 				<a href="http://www.ravernkoh.me/">
 					<figure class="avatar avatar-xl tooltip tooltip-bottom" data-tooltip="Ravern">
-						<img src="images/Avatars/ravern.png" alt="icon">
+						<img src="images/Avatars/1.png" alt="icon">
 					</figure>
 				</a>
 				<a href="http://leafybeef.com">
 					<figure class="avatar avatar-xl tooltip tooltip-bottom" data-tooltip="Sheline">
-						<img src="images/Avatars/sheline.png" alt="icon">
+						<img src="images/Avatars/2.png" alt="icon">
 					</figure>
 				</a>
 				<a href="https://sean1188.github.io">
 					<figure class="avatar avatar-xl tooltip tooltip-bottom" data-tooltip="Sean">
-						<img src="images/Avatars/sean.png" alt="icon">
+						<img src="images/Avatars/3.png" alt="icon">
 					</figure>
 				</a>
 				<a href="https://github.com/Kaioru">
 					<figure class="avatar avatar-xl tooltip tooltip-bottom" data-tooltip="Keith">
-						<img src="images/Avatars/keith.png" alt="icon">
+						<img src="images/Avatars/4.png" alt="icon">
 					</figure>
 				</a>
-				<a href="">
+				<a href="https://www.instagram.com/nigglett/">
 					<figure class="avatar avatar-xl tooltip tooltip-bottom" data-tooltip="Wan Ning">
-						<img src="images/Avatars/ravern.png" alt="icon">
+						<img src="images/Avatars/5.png" alt="icon">
 					</figure>
 				</a>
 			</div>
 		</div>
-		<div class="padded container col-5 col-lg-8 col-md-9 col-sm-11 col-mx-auto centered">
-			<a href="http://www.ravernkoh.me/">
-				<figure class="avatar avatar-lg tooltip tooltip-bottom" data-tooltip="Ravern">
-					<img src="images/Avatars/ravern.png" alt="icon">
-				</figure>
-			</a>
-			<a href="http://www.ravernkoh.me/">
-				<figure class="avatar avatar-lg tooltip tooltip-bottom" data-tooltip="Ravern">
-					<img src="images/Avatars/ravern.png" alt="icon">
-				</figure>
-			</a>
-			<a href="http://www.ravernkoh.me/">
-				<figure class="avatar avatar-lg tooltip tooltip-bottom" data-tooltip="Ravern">
-					<img src="images/Avatars/ravern.png" alt="icon">
-				</figure>
-			</a>
+		<div id= "members" class="padded container col-4 col-xl-6 col-md-9 col-sm-11 col-mx-auto centered">
+			<script id="avatar-template" type="text/x-handlebars-template">
+				<figure class="avatar avatar-lg tooltip tooltip-bottom" data-initial="{{initial}}" data-tooltip="{{name}}"></figure>
+	</script>
 		</div>
 	</div>
 
 	<div class="container section padded">
 		<div class="columns">
 			<div class="col-12 columns">
-				<div class="col-4 col-xl-5 col-md-7 col-xs-9 col-mx-auto">
+				<div class="col-4 col-xl-6 col-md-7 col-xs-9 col-mx-auto">
 					<h2>Join us</h2>
-					<h6><i>For just $399</i></h6>
-					Jokes. But seriously do join us with an open mind; you are not expected or required 
-					to have any knowledge in coding/programming. 
+					<h6>
+						<i>For just $399</i>
+					</h6>
+					Jokes. But seriously do <a href="https://tinyurl.com/ICTCCAFiesta-2018">Join Us</a> with an open mind; you are not expected or required to have any knowledge in coding/programming.
 				</div>
 			</div>
 		</div>
 	</div>
 
 
-	<footer class=""> 
+	<footer class="">
 		<a href="https://sean1188.github.io">Sean Lim</a> // 2018</footer>
 </body>
 

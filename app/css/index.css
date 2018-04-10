@@ -71,6 +71,10 @@ img {
     object-fit: contain;  
 }
 
+.avatar-lg {
+    margin: 3px !important;
+}
+
 footer {
     padding: 20px 7vw;
     background-color: whitesmoke;
