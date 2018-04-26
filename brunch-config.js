@@ -4,7 +4,7 @@ exports.files = {
     joinTo: {
       'js/vendor.js': /^(?!app)/, // Files that are not in `app` dir.
       'js/vendor.js': /^node_modules/,
-      'js/app.js': /^app/
+      'js/app.js': /^app/,
     }
   },
   stylesheets: {joinTo: 'css/app.css'}

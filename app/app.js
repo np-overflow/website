@@ -6,10 +6,13 @@ require('handlebars');
 require('handlebars/runtime');
 
 document.addEventListener('DOMContentLoaded', () => {
-  // do your setup here
-  console.log('Initialized app');
+  typed();
+  papaparse();
+});
 
-  var options = {
+// Banner auto-typing text
+function typed() {
+  const options = {
     strings: ["Welcome to NP's Hack Club", "Welcome to Uniql", "Welcome to Overflow"],
     startDelay: 1000,
     showCursor: true,
@@ -20,23 +23,24 @@ document.addEventListener('DOMContentLoaded', () => {
     backDelay: 50,
     typeSpeed: 100
   }  
+  new Typed(".element", options);
+}
 
-  var typed = new Typed(".element", options);
-
-  var template = Handlebars.compile(document.getElementById('avatar-template').innerHTML);
-
+// Parsing and displaying of member list
+function papaparse() {
+  const template = Handlebars.compile(document.getElementById('avatar-template').innerHTML);
   Papa.parse("/members.csv", {
     download: true,
     complete: (res) => {
-      console.log(res);
-      let foo = res.data.map((data) => {
+      document.getElementById('members').innerHTML = res.data.map((data) => {
+        const splitted = data[0].split(' ');
         return template({
           name: data[0],
-          initial: data[0].split(" ").length > 1 ? data[0].split(" ")[0][0].toUpperCase() + data[0].split(" ")[1][0].toUpperCase() : data[0][0].toUpperCase()
+          initial: splitted.length > 1
+            ? splitted[0][0].toUpperCase() + splitted[1][0].toUpperCase()
+            : data[0][0].toUpperCase(),
         });
       }).join('');
-      document.getElementById('members').innerHTML = foo;
     }
   }); 
-
-});
+}
