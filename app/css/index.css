@@ -1,82 +1,85 @@
-body, html { overflow-x: hidden !important; }
+body,
+html {
+  overflow-x: hidden !important;
+}
 body {
-    user-select: none;
-    background-color: whitesmoke; 
-    font-family: Sailec !important;
+  user-select: none;
+  background-color: whitesmoke;
+  font-family: Sailec !important;
 }
 
 img {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .navbar {
-    background-color: white;
-    padding: 0px 20px;
+  background-color: white;
+  padding: 0px 20px;
 }
 
 .social-handle {
-    height: 20px;
+  height: 20px;
 }
 
 .landing {
-    object-fit: contain;
-    padding: 17vh 50px;
-    background: linear-gradient(#FF8E2C, #FF5A81);
-    color: white
+  object-fit: contain;
+  padding: 17vh 50px;
+  background: linear-gradient(#ff8e2c, #ff5a81);
+  color: white;
 }
 
 .landing > h1 {
-    font-size: 60px;
-    font-weight: bold;
-    letter-spacing: -1px;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: -1px;
 }
 
 .container:nth-child(odd) {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 .container {
-    font-size: 19px;
+  font-size: 19px;
 }
 
 .container > a {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .section {
-    padding: none;
-    margin: none;
-    object-fit: contain;
+  padding: none;
+  margin: none;
+  object-fit: contain;
 }
 
 .parallax-content {
-    padding: 80px;
-    height: 20vh;
+  padding: 80px;
+  height: 20vh;
 }
 
 .parallax-back > img {
-    object-fit: contain;
-    opacity: 0.8;
-    margin: auto;
-    height: 25vh;
-    width: auto;
+  object-fit: contain;
+  opacity: 0.8;
+  margin: auto;
+  height: 25vh;
+  width: auto;
 }
 
 .parallax-front > h2 {
-    color: white;
-    font-weight: 500;
-    padding: 50px;
+  color: white;
+  font-weight: 500;
+  padding: 50px;
 }
 
 .avatar > img {
-    object-fit: contain;  
+  object-fit: contain;
 }
 
 .avatar-lg {
-    margin: 3px !important;
+  margin: 3px !important;
 }
 
 footer {
-    padding: 20px 7vw;
-    background-color: whitesmoke;
+  padding: 20px 7vw;
+  background-color: whitesmoke;
 }
