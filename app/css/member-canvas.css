@@ -1,7 +1,7 @@
 .member-canvas {
   padding: 50px;
   border: #ffcf00 50px solid;
-  height: 100%;
+  height: auto;
 }
 
 .member-canvas img:first-child {
