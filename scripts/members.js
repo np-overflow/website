@@ -5,7 +5,9 @@ var showdown = require('showdown'),
 
 var targetFiles = fs.readdir('markdown_submissions/', (err, files) => {
   files.filter(file => path.extname(file).toLowerCase() == '.md').map(mapFile);
-  fs.writeFile('public/members.csv', files.join('\n'));
+  fs.writeFile('public/members.csv', files.join('\n'), err => {
+    if (err) console.log(err);
+  });
 });
 
 var mapFile = x => {
