@@ -1,34 +1,56 @@
-var showdown = require('showdown'),
-  fs = require('fs'),
-  path = require('path'),
-  converter = new showdown.Converter();
+const fs = require('fs');
+const path = require('path');
 
-var targetFiles = fs.readdir('markdown_submissions/', (err, files) => {
-  files.filter(file => path.extname(file).toLowerCase() == '.md').map(mapFile);
-  fs.writeFile('public/members.csv', files.join('\n'), err => {
-    if (err) console.log(err);
-  });
-});
+const showdown = require('showdown');
+const converter = new showdown.Converter();
 
-var mapFile = x => {
-  fs.readFile(`markdown_submissions/${x}`, 'utf-8', (err, data) => {
-    if (err) console.log(err);
-    var html =
-      '<link rel="stylesheet" href="../../css/app.css"> <div class="member-canvas">' +
-      '<a href="../../">&crarr;</a>' +
-      converter.makeHtml(data) +
-      '</div>';
-    fs.mkdir('public/members', err => {
-      fs.mkdir(`public/members/${x.replace('.md', '')}`, err => {
-        // if (err) console.log(err);
-        fs.writeFile(
-          `public/members/${x.replace('.md', '')}/index.html`,
-          html,
-          err => {
-            if (err) console.log(err);
-          }
-        );
+const markdownDir = 'markdown_submissions';
+const htmlDir = 'members';
+const csvFile = 'members';
+
+function isMarkdown(file) {
+  const ext = path.extname(file).toLowerCase();
+  return ext == '.md';
+}
+
+function generateHtml(file) {
+  fs.readFile(`markdown_submissions/${file}`, 'utf-8', (err, data) => {
+    if (err) console.error(err);
+
+    const html = `
+      <link rel="stylesheet" href="../../css/app.css">
+      <div class="member-canvas">
+      <a href="../../">&crarr;</a>
+      ${converter.makeHtml(data)}
+      </div>
+    `;
+
+    fs.mkdir(`public/${htmlDir}`, err => {
+      if (err) console.warn(err);
+
+      const name = file.replace('.md', '');
+
+      fs.mkdir(`public/${htmlDir}/${name}`, err => {
+        if (err) console.warn(err);
+
+        fs.writeFile(`public/${htmlDir}/${name}/index.html`, html, err => {
+          if (err) console.error(err);
+        });
       });
     });
   });
-};
+}
+
+function generateCsv(files) {
+  const names = files.map(file => file.replace('.md', ''));
+
+  fs.writeFile(`public/${csvFile}.csv`, names.join('\n'), err => {
+    if (err) console.error(err);
+  });
+}
+
+fs.readdir(markdownDir, (err, files) => {
+  files = files.filter(isMarkdown);
+  files.forEach(generateHtml);
+  generateCsv(files);
+});

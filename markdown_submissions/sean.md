@@ -25,8 +25,8 @@ projects together that will benefit the community.
 
 ## Interesting Facts
 
-* I dont play guitar
-* Hacker in training
+* I am a chef
+* My nama chef
 * I don't like to play frisbee and football
 * memes r life
 * I do not like Python
@@ -40,25 +40,3 @@ alert(s);
 s = "Python syntax highlighting"
 print s
 ```
-
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
-```
-
-Colons can be used to align columns.
-
-| Tables        |      Are      |  Cool |
-| ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
-
-| Markdown | Less      | Pretty     |
-| -------- | --------- | ---------- |
-| _Still_  | `renders` | **nicely** |
-| 1        | 2         | 3          |
