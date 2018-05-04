@@ -7,6 +7,13 @@ require('handlebars/runtime');
 
 var fs = require('fs');
 
+// https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
+String.prototype.toProperCase = function() {
+  return this.replace(/\w\S*/g, function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   typed();
   members();
@@ -43,11 +50,15 @@ function members() {
       let foo = res.data
         .map(data => {
           return template({
-            name: data[0].replace('.md', ''),
+            name: data[0]
+              .replace('_', ' ')
+              .replace('.md', '')
+              .toProperCase(),
+            path: data[0],
             initial:
-              data[0].split(' ').length > 1
-                ? data[0].split(' ')[0][0].toUpperCase() +
-                  data[0].split(' ')[1][0].toUpperCase()
+              data[0].split('_').length > 1
+                ? data[0].split('_')[0][0].toUpperCase() +
+                  data[0].split('_')[1][0].toUpperCase()
                 : data[0][0].toUpperCase()
           });
         })

@@ -8,11 +8,6 @@ const markdownDir = 'markdown_submissions';
 const htmlDir = 'members';
 const csvFile = 'members';
 
-// https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
-String.prototype.toProperCase = function() {
-    return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-};
-
 function isMarkdown(file) {
   const ext = path.extname(file).toLowerCase();
   return ext == '.md';
@@ -20,10 +15,7 @@ function isMarkdown(file) {
 
 function generateHtml(file) {
   fs.readFile(`markdown_submissions/${file}`, 'utf-8', (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
+    if (err) console.error(err);
 
     const html = `
       <link rel="stylesheet" href="../../css/app.css">
@@ -34,21 +26,15 @@ function generateHtml(file) {
     `;
 
     fs.mkdir(`public/${htmlDir}`, err => {
-      if (err) {
-        console.error(err);
-        return;
-      }
+      if (err) console.warn(err);
 
       const name = file.replace('.md', '');
 
       fs.mkdir(`public/${htmlDir}/${name}`, err => {
-        if (err) {
-          console.error(err);
-          return;
-        }
+        if (err) console.warn(err);
 
         fs.writeFile(`public/${htmlDir}/${name}/index.html`, html, err => {
-            if (err) console.error(err);
+          if (err) console.error(err);
         });
       });
     });
@@ -56,9 +42,7 @@ function generateHtml(file) {
 }
 
 function generateCsv(files) {
-  const names = files
-    .map(file => file.replace('_', ' '))
-    .map(name => name.toProperCase());
+  const names = files.map(file => file.replace('.md', ''));
 
   fs.writeFile(`public/${csvFile}.csv`, names.join('\n'), err => {
     if (err) console.error(err);
