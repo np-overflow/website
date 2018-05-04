@@ -6,4 +6,5 @@
 
 .member-canvas img:first-child {
   border-radius: 50%;
+  width: 200px;
 }
