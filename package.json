@@ -10,17 +10,17 @@
     "build": "brunch build --production && node scripts/members.js"
   },
   "dependencies": {
-    "handlebars": "^4.0.11",
-    "papaparse": "^4.3.7",
-    "showdown": "^1.8.6",
-    "typed.js": "^2.0.6"
+    "handlebars": "^4.1.1",
+    "papaparse": "^4.6.3",
+    "showdown": "^1.9.0",
+    "typed.js": "^2.0.10"
   },
   "devDependencies": {
-    "auto-reload-brunch": "^2",
-    "babel-brunch": "~6.0",
-    "babel-preset-latest": "^6",
-    "brunch": "^2",
-    "clean-css-brunch": "^2",
-    "uglify-js-brunch": "^2"
+    "auto-reload-brunch": "^2.7.1",
+    "babel-brunch": "^7.0.1",
+    "babel-preset-env": "^1.7.0",
+    "brunch": "^2.10.17",
+    "clean-css-brunch": "^2.10.0",
+    "uglify-js-brunch": "^2.10.0"
   }
 }

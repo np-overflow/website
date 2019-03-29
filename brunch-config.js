@@ -9,7 +9,3 @@ exports.files = {
   },
   stylesheets: { joinTo: "css/app.css" }
 };
-
-exports.plugins = {
-  babel: { presets: ["latest"] }
-};
