@@ -10,7 +10,7 @@
     "build": "brunch build --production && node scripts/members.js"
   },
   "dependencies": {
-    "handlebars": "^4.1.1",
+    "handlebars": "^4.3.0",
     "papaparse": "^4.6.3",
     "showdown": "^1.9.0",
     "typed.js": "^2.0.10"
