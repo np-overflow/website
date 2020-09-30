@@ -1,6 +1,6 @@
 # Website
 
-A very cool website for Overflow.
+A very amazing website for Overflow.
 
 ## Usage
 
